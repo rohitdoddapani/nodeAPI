@@ -1,0 +1,27 @@
+{
+  "name": "simpleapi",
+  "version": "1.0.0",
+  "description": "RestAPI in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "front": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run front\"",
+    "heroku-postbuild": "cd client && npm install && npm run build "
+  },
+  "author": "rohitdoddapani",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
